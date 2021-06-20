@@ -25,7 +25,7 @@ namespace Taller_2
                 ConexMySQL conex = new ConexMySQL();
                 conex.open();
 
-                string seleccionNacional = "SELECT id_cliente AS \"ID del Cliente\", codigo_nacional AS \"Codigo del Cliente Nacional\", nombre AS \"Nombre\", ciudad AS \"Ciudad\" FROM  cliente  INNER JOIN cliente_nacional ON cliente.id_cliente=cliente_nacional.clienteid_cliente WHERE cliente.desactivado_c=0";
+                string seleccionNacional = "SELECT id_cliente AS \"ID del Cliente\", codigo_nacional AS \"Codigo del Cliente Nacional\", nombre AS \"Nombre\", ciudad AS \"Ciudad\" FROM  cliente  INNER JOIN cliente_nacional ON cliente.id_cliente=cliente_nacional.clienteid_cliente WHERE cliente.desactivado_c=0 ";
                 DataTable tabla = conex.selectQuery(seleccionNacional);
                 dataGridView_clientesNacionales.DataSource = tabla;
 
@@ -63,7 +63,7 @@ namespace Taller_2
                 ConexMySQL conex = new ConexMySQL();
                 conex.open();
 
-                string seleccionClientes = "SELECT cliente.id_cliente AS \"ID del Cliente\", cliente_extranjero.nombre AS \"Nombre Cliente Extranjero\", cliente_nacional.nombre AS \"Nombre Cliente Nacional\" FROM  cliente LEFT JOIN cliente_nacional  ON cliente_nacional.clienteid_cliente=cliente.id_cliente LEFT JOIN cliente_extranjero ON cliente_extranjero.clienteid_cliente=cliente.id_cliente WHERE cliente.desactivado_c=0";
+                string seleccionClientes = "SELECT cliente.id_cliente AS \"ID del Cliente\", cliente_extranjero.nombre AS \"Nombre Cliente Extranjero\", cliente_nacional.nombre AS \"Nombre Cliente Nacional\" FROM  cliente LEFT JOIN cliente_nacional  ON cliente_nacional.clienteid_cliente=cliente.id_cliente LEFT JOIN cliente_extranjero ON cliente_extranjero.clienteid_cliente=cliente.id_cliente WHERE cliente.desactivado_c=0 ";
                 DataTable tabla = conex.selectQuery(seleccionClientes);
                 dataGridView_listadoClientes.DataSource = tabla;
 

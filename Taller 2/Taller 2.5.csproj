@@ -176,6 +176,9 @@
     <EmbeddedResource Include="Cantidad_Productos.resx">
       <DependentUpon>Cantidad_Productos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas_Clientes.resx">
+      <DependentUpon>Consultas_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Detalle_Ventas.resx">
       <DependentUpon>Detalle_Ventas.cs</DependentUpon>
     </EmbeddedResource>
